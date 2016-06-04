@@ -13,12 +13,17 @@
 use laraveltest\User;
 use Faker\Factory as Faker;
 
-
+/*
 Route::get('/', function () {
 
          return view('welcome');
 });
+*/
 
+Route::get('/', [
+    'as' => 'home',
+    'uses' => 'PagesController@home'
+]);
 
 Route::get('/create', function () {
    

@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use laraveltest\User;
 
-class DatabaseSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-     
-       $this->call(UserTableSeeder::class);
-         //$this->call(UsersTableSeeder::class);
+        
+        factory(User::class, 10000)->create();
+        
     }
 }
