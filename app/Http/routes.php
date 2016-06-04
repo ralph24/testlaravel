@@ -11,6 +11,8 @@
 |
 */
 use laraveltest\User;
+use Faker\Factory as Faker;
+
 
 Route::get('/', function () {
 
@@ -20,26 +22,48 @@ Route::get('/', function () {
 
 Route::get('/create', function () {
    
+     $faker = Faker::create();
+    
     $attributes = array( 
-        'name' => 'Italo Morales',
-        'email' => 'rfernandez@gmail.com',
+        'name' => $faker->name,
+        'email' => $faker->email,
         'password' => bcrypt('123456'),
-        'gender' => 'm',
-        'biography' => 'Profesor de Programacion'
+        'gender' => $faker->randomElement(['f', 'm']),
+        'biography' => $faker->text(255)
         );
     $user = User::create($attributes);
     
-    return 'usuario guardado';
-// return view('welcome');
+    return $user;
+
 });
 
-Route::get('/update-user', function () {
-   
 
-    $user = User::find(28);
-    $user->gender = 'f';
-    $user->biography = 'Profesor de Programacion';
+
+Route::get('/read/{id}', function ($id) {
+   
+     $user = User::find($id);
+     return $user;
+
+});
+
+
+Route::get('/update/{id}', function ($id) {
+   
+    $faker = Faker::create();
+    $user = User::find($id);
+    
+    $user->name = $faker->name;
+    $user->gender = $faker->randomElement(['f','m']);
+    $user->biography = $faker->text(255);
     $user->save();
-    return 'usuario Actualizado';
-// return view('welcome');
+     return $user;
+
+});
+
+
+Route::get('/delete/{id}', function($id){
+    $user = User::find($id);
+    $user->delete();
+    
+    return 'Usuario Eliminado: '.$id;
 });
