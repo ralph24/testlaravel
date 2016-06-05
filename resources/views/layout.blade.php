@@ -4,10 +4,7 @@
         <meta charset="utf-8">
         <title>Laravel Eloquent ORM</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <style>
-            
-            margin-top:50px;
-        </style>
+
     
     </head>
     <body>
@@ -23,7 +20,7 @@
             </div>
             
         </nav>
-
+<br><br><br>
   
         @yield('content')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

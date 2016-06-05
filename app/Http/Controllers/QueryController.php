@@ -26,4 +26,13 @@ class QueryController extends Controller
         $title= 'Lista de usuario utilizando (GET-Custom con Array)';
         return view('query.methodsSimple', compact('title','users'));
     }
+     public function eloquentDelete($id){
+        $user = User::find($id);
+        $user->delete();
+                
+        return view('pages.delete');
+    }
+    
+    
+    
 }

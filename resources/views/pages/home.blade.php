@@ -18,20 +18,10 @@
        Ultimos Usuarios registrados
     </h1>
     <table class="table table-hover table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Email</th>
-                <th>Genero</th>
-                <th>Biografia</th>
-            </tr>
+            @include('partials.head-user')
         <tbody>
             @include('partials.list-users')
         </tbody>
-
-        </thead>
-
     </table>
 </div>
 @stop
