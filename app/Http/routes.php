@@ -25,6 +25,11 @@ Route::get('/', [
     'uses' => 'PagesController@home'
 ]);
 
+Route::get('/all', [
+    'as' => 'all',
+    'uses' => 'QueryController@getAll'
+]);
+
 Route::get('/create', function () {
    
      $faker = Faker::create();
