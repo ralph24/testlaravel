@@ -13,22 +13,32 @@
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-                <a href="{{ route('home') }}" class="navbar-brand">Eloquent ORM</a> 
+                <a href="{{ route('home') }}" class="navbar-brand">Eloquent ORM</a>
                 <ul class="nav navbar-nav">
-                    <li >
-                        <a href="{{ route('home') }}">home</a>
+                    <li>
+                        <a href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Cosultas Eloquent
+                            Consultas Eloquent
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="{{ route('all') }}">
-                                    Todos Los Usuarios
+                                    Todos los usuarios (ALL)
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{ route('get', 'f') }}">
+                                   Lista de usuarios Femenino
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="{{ route('get', 'm') }}">
+                                   Lista de usuarios Masculino
+                                </a>
+                            </li> 
                         </ul>
                     </li>
                 </ul>
@@ -38,7 +48,7 @@
 
   
         @yield('content')
-  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </body>
 </html>
