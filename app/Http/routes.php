@@ -35,6 +35,11 @@ Route::get('/get/{gender}', [
     'uses' => 'QueryController@eloquentGet'
 ]);
 
+Route::get('/get-custom', [
+    'as' => 'get-custom',
+    'uses' => 'QueryController@eloquentGetCustom'
+]);
+
 
 Route::get('/create', function () {
    
