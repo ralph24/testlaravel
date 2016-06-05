@@ -18,7 +18,7 @@
             <th>Biografia</th>
         </tr>
     <tbody>
-       @include('query.partials.list-users')
+       @include('partials.list-users')
     </tbody>
         
     </thead>

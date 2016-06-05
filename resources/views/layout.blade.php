@@ -18,7 +18,7 @@
                     <li>
                         <a href="{{ route('home') }}">Home</a>
                     </li>
-                    @include('query.partials.menuquery')
+                    @include('partials.menuquery')
                 </ul>
             </div>
             
