@@ -24,6 +24,11 @@
                 Lista de usuarios Get con Array
             </a>
         </li> 
+        <li>
+            <a href="{{ route('lists') }}">
+                 Lista de usuario para Select (LISTS)
+            </a>
+        </li> 
     </ul>
 </li>
 
