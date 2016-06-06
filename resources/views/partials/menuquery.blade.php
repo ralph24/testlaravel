@@ -29,6 +29,12 @@
                  Lista de usuario para Select (LISTS)
             </a>
         </li> 
+        <li>
+            <a href="{{ route('first-last') }}">
+                 Primero y Ultimo Registro 
+            </a>
+        </li>  
+        
     </ul>
 </li>
 
