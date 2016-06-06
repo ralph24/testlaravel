@@ -34,7 +34,11 @@
                  Primero y Ultimo Registro 
             </a>
         </li>  
-        
+        <li>
+            <a href="{{ route('paginate') }}">
+                 Paginacion 
+            </a>
+        </li>  
     </ul>
 </li>
 
